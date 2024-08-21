@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<style>
+    body {
+        background-color: #191B25;
+    }
+
+    @font-face {
+        font-family: RexBold;
+        src: url('https://imatt-oss.github.io/font/Rex-Bold.ttf') format("opentype");
+    }
+
+    footer {
+        position: relative;
+        background-color: #101115;
+        padding: 30px 60px;
+        overflow: hidden;
+        z-index: 1;
+        background-image: url("https://imatt-oss.github.io/EnglishG/images/Footer/background-pattern.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 16px;
+        background-image: url("https://imatt-oss.github.io/EnglishG/images/Footer/EG_Pattern.png");
+        background-repeat: repeat;
+        background-position: center;
+    }
+
+    .newsletter {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .newsletter h2 {
+        font-family: RexBold;
+        font-size: 32px;
+        letter-spacing: 2px;
+        background: -webkit-linear-gradient(360deg, #89A3F1, #63dcfd);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: fit-content;
+        margin: 0 auto;
+        text-shadow: 0 0 128px #7dcadc;
+    }
+
+    .newsletter h3 {
+        font-family: "Exo 2", sans-serif;
+        font-weight: 300;
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin: 0 0 24px 0;
+        color: #7dcadc;
+    }
+
+    .input-container {
+        display: flex;
+        align-items: center;
+        border: 1px solid #3E4150;
+        border-radius: 50px;
+        width: 546px;
+        overflow: hidden; /* Ensures the button stays within the container */
+        margin: auto;
+        padding: 10px;
+        /*z-index: 1;*/
+        /*position: relative;*/
+    }
+
+    .input-container:hover {
+        border: 1px solid rgba(192, 239, 255, 0.3);
+    }
+
+    .input-container:focus-within {
+        border: 1px solid rgba(192, 239, 255, 0.5);
+        box-shadow: 0 0 8px rgba(192, 239, 255, 0.2);
+
+    }
+
+    .input-container input[type="email"] {
+        font-family: "Exo 2", sans-serif;
+        flex: 1; /* Takes up the remaining space */
+        border: none;
+        font-size: 20px;
+        outline: none;
+        background-color: transparent;
+        color: #656A82;
+
+    }
+
+    .input-container input[type="email"]::placeholder {
+        color: #656A82;
+        opacity: 65%;
+        font-style: italic;
+    }
+
+    .input-container button {
+        font-family: "Exo 2", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: -1px;
+        border: none;
+        background-color: #89D7F1;
+        color: #0E111A;
+        padding: 7px 40px;
+        cursor: pointer;
+        margin-left: 10px; /* Adds the 10px space between the input and button */
+        border-radius: 50px; /* Rounds the right corners of the button */
+        outline: none;
+        transition: all 0.5s ease;
+    }
+
+    .input-container button:hover {
+        background-color: #7fe0ff;
+    }
+
+
+    .main-section {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 60px;
+        margin-top: 30px;
+    }
+
+    .main-left {
+
+    }
+
+    .brand-logo {
+        cursor: pointer;
+        width: fit-content;
+        flex-shrink: 1;
+        flex-grow: 1;
+        display: flex;
+        gap: 12px;
+        margin-bottom: 24px;
+        justify-content: center;
+    }
+
+    #EG {
+        width: 81px;
+        border-radius: 50%;
+        height: 81px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 16px rgba(255, 152, 56, 0.2);
+    }
+
+    #EG:hover {
+        box-shadow: 0 0 16px rgba(255, 152, 56, 0.3);
+    }
+
+    #EnGa {
+        width: 80%;
+        height: 80%;
+        align-self: center;
+    }
+
+    .main-left button {
+        font-family: "Exo 2", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        border: none;
+        padding: 10px 30px;
+        cursor: pointer;
+        border-radius: 50px; /* Rounds the right corners of the button */
+        transition: all 0.5s ease;
+        margin-right: 16px;
+    }
+
+    .main-left button:hover {
+        box-shadow: 0 0 8px rgba(31, 34, 51, 0.6);
+    }
+
+    .main-left button a {
+        text-decoration: none;
+        transition: color 0.5s ease;
+    }
+
+    .main-left button:hover a {
+        color: #ffffff;
+    }
+
+    .main-left button a:visited {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    #primary {
+        background-color: #3653F6;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    #primary:hover {
+        background-color: #2f4dff;
+        color: rgba(255, 255, 255, 1);
+        box-shadow: 0 0 8px rgba(47, 77, 255, 0.4);
+
+    }
+
+    #secondary {
+        background-color: #1F2233;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .social-media svg {
+        width: 36px;
+        height: 36px;
+        fill: #8389AB;
+        transition: all 0.3s ease;
+    }
+
+    .social-media ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+    }
+
+    .social-media ul li {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .social-media svg:hover {
+        fill: #7C90FF;
+        transform: scale(105%);
+    }
+
+    .main-right {
+        align-self: center;
+    }
+
+    .main-right .nav-links {
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        text-align: right;
+
+    }
+
+    .Flink-item {
+        font-family: "Exo 2", sans-serif;
+        color: #ACADB0;
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+
+    .Flink-item:hover {
+        color: #9BACFF;
+        text-decoration: underline;
+    }
+
+    .notion-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .notion-section p {
+        font-family: "Exo 2", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        color: #87888A;
+    }
+
+    .notion-section .buttons {
+        display: flex;
+        gap: 12px;
+    }
+
+    .notion-section button {
+        border-radius: 50px;
+        border: 2px #1F2233 solid;
+        background-color: transparent;
+        padding: 10px 30px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        height: auto;
+    }
+
+    .notion-section button a {
+        font-family: "Lato", sans-serif;
+        color: #6E7498;
+        font-weight: 500;
+        font-size: 20px;
+        transition: all 0.5s ease;
+        text-decoration: none;
+    }
+
+    .notion-section a:visited {
+        color: #6E7498;
+        text-decoration: none;
+    }
+
+    .notion-section button:hover {
+        box-shadow: 0 0 4px rgba(110, 116, 152, 0.2);
+        border: 2px #313859 solid;
+    }
+
+    .notion-section button:hover a {
+        color: #7e8bd1;
+    }
+
+    .Fdivider {
+        margin: auto;
+        align-self: center;
+    }
+
+    #profile-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    /*    Responsive    */
+
+    /* For screens 320px and smaller */
+    @media (max-width: 320px) {
+        footer {
+            padding: 15px 30px;
+
+        }
+    }
+
+    /* For screens 767px and smaller */
+    @media (max-width: 767px) {
+        footer {
+            padding: 20px 20px;
+
+        }
+        .newsletter {
+            margin-bottom: 20px;
+        }
+        .newsletter h3 {
+            font-size: 24px;
+
+        }
+        .input-container {
+            width: 95%;
+            padding: 5px;
+        }
+        .input-container input[type="email"] {
+            font-size: 16px;
+
+        }
+        .input-container button {
+            padding: 7px 30px;
+            margin-left: 5px; /* Adds the 10px space between the input and button */
+        }
+        .main-section {
+            padding-right: 0;
+            margin-top: 20px;
+        }
+        .brand-logo {
+            width: 200px;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        #EG {
+            width: 61px;
+            height: 61px;
+        }
+        .main-left button {
+            font-size: 16px;
+            font-weight: 300;
+            padding: 10px 20px;
+        }
+        #secondary {
+            display: none;
+            visibility: hidden;
+        }
+        .main-right {
+            align-self: flex-start;
+        }
+        .main-right .nav-links {
+            gap: 18px;
+        }
+        .Flink-item {
+            font-size: 20px;
+            font-weight: 300;
+            text-align: right;
+        }
+        .notion-section {
+            margin-top: 20px;
+        }
+        .notion-section p {
+            font-weight: 200;
+            font-size: 12px;
+        }
+        .notion-section .buttons {
+            display: flex;
+            gap: 8px;
+        }
+        .notion-section button {
+            padding: 5px 20px;
+        }
+        .buttons button:nth-child(2) {
+            display: none;
+        }
+        .notion-section button a {
+            font-weight: 400;
+            font-size: 16px;
+        }
+        #profile-icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    /* For screens between 768px and 1279px */
+    @media (max-width: 1279px) and (min-width: 768px) {
+        footer {
+            padding: 30px 20px;
+        }
+        .newsletter {
+            margin-bottom: 30px;
+        }
+        .newsletter h3 {
+            font-size: 24px;
+
+        }
+        .main-section {
+            padding-right: 0;
+            margin-top: 30px;
+        }
+        .brand-logo {
+            width: 250px;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        #EG {
+            width: 61px;
+            height: 61px;
+        }
+
+        .main-left button {
+            font-size: 20px;
+            font-weight: 300;
+            padding: 10px 20px;
+            margin-right: 8px;
+
+        }
+        .main-right {
+            align-self: flex-start;
+        }
+        .main-right .nav-links {
+            gap: 18px;
+        }
+        .Flink-item {
+            font-weight: 300;
+            text-align: right;
+
+        }
+        .notion-section {
+            margin-top: 30px;
+        }
+        .notion-section p {
+            font-weight: 200;
+            font-size: 16px;
+        }
+        .notion-section .buttons {
+            display: flex;
+            gap: 8px;
+        }
+        .notion-section button {
+            padding: 5px 20px;
+        }
+        .buttons button:nth-child(2) {
+            display: none;
+        }
+        .notion-section button a {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        #profile-icon {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+</style>
+<footer>
+    <div class="newsletter">
+        <h2>_Join EG Newsletter_</h2>
+        <h3>Get Weekly Cool English Tips!</h3>
+        <form action="/submit-email" method="POST" class="email-form">
+            <div class="input-container">
+                <svg id="profile-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_2350_1632" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="38"
+                          height="38">
+                        <rect width="38" height="38" rx="12.6667" fill="#C4C4C4"/>
+                    </mask>
+                    <g mask="url(#mask0_2350_1632)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M15.2389 12.6663C15.2389 10.5895 16.9225 8.90592 18.9993 8.90592C21.0762 8.90592 22.7598 10.5895 22.7598 12.6663C22.7598 14.7432 21.0762 16.4268 18.9993 16.4268C16.9225 16.4268 15.2389 14.7432 15.2389 12.6663ZM18.9993 6.92676C15.8295 6.92676 13.2598 9.49646 13.2598 12.6663C13.2598 15.8362 15.8295 18.4059 18.9993 18.4059C22.1692 18.4059 24.7389 15.8362 24.7389 12.6663C24.7389 9.49646 22.1692 6.92676 18.9993 6.92676ZM17.4752 20.1875C15.069 20.1875 12.8081 21.3388 11.3928 23.2848L10.614 24.3557C8.52093 27.2336 10.5768 31.2708 14.1354 31.2708H24.3148C27.7506 31.2708 29.8329 27.4777 27.9882 24.579L27.4101 23.6706C26.0296 21.5012 23.6365 20.1875 21.0651 20.1875H17.4752ZM13.3136 24.6817C14.2819 23.3502 15.8288 22.5625 17.4752 22.5625H21.0651C22.8245 22.5625 24.4619 23.4614 25.4064 24.9457L25.9845 25.8541C26.823 27.1717 25.8765 28.8958 24.3148 28.8958H14.1354C12.5178 28.8958 11.5833 27.0607 12.5347 25.7526L13.3136 24.6817Z"
+                              fill="#656A82"/>
+                    </g>
+                </svg>
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <img class="Fdivider" src="https://imatt-oss.github.io/EnglishG/images/Footer/Line_divider.png" alt="">
+
+    <div class="main-section">
+        <div class="main-left">
+            <div class="brand-logo">
+                <svg id="EG" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_2348_903" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="81"
+                          height="81">
+                        <circle cx="40.25" cy="40.25" r="40.25" fill="black"/>
+                    </mask>
+                    <g mask="url(#mask0_2348_903)">
+                        <rect x="-0.5" y="-0.5" width="81.5" height="81.5" fill="url(#paint0_linear_2348_903)"/>
+                        <g clip-path="url(#clip0_2348_903)">
+                            <rect x="1.5" y="1.5" width="77.5" height="77.5" rx="38.75"
+                                  fill="url(#paint1_radial_2348_903)"/>
+                            <g filter="url(#filter0_d_2348_903)">
+                                <path d="M37.4931 22.6567V13.1953H0.830078V68.387H37.4931V54.1948H18.176V47.493H30.7913V34.0893H18.176V27.3875H32.7624L37.4931 22.6567Z"
+                                      fill="url(#paint2_linear_2348_903)"/>
+                                <path d="M50.8797 13.2405L51.1987 17.8658L72.2169 13.1953H52.0445C51.6478 13.1953 51.2594 13.2105 50.8797 13.2405Z"
+                                      fill="url(#paint3_linear_2348_903)"/>
+                                <path d="M77.1944 13.1953L51.6765 20.2545L58.3521 29.83V27.3875H72.9384L77.6692 22.6567V13.1953H77.1944Z"
+                                      fill="url(#paint4_linear_2348_903)"/>
+                                <path d="M49.7655 22.1655L41.0061 32.3764V57.3486C41.0061 64.0505 45.3426 68.387 52.0445 68.387H79.6403V64.5879L63.0828 41.0762V54.1948H58.3521V34.3585L49.7655 22.1655Z"
+                                      fill="url(#paint5_linear_2348_903)"/>
+                                <path d="M41.0061 29.5531V24.2336C41.0061 21.4675 41.482 20.053 42.3621 18.4237L47.8545 20.2545L41.0061 29.5531Z"
+                                      fill="url(#paint6_linear_2348_903)"/>
+                                <path d="M43.3977 16.8789L48.3322 17.8658L48.6253 13.6162C46.468 14.1828 44.6912 15.3046 43.3977 16.8789Z"
+                                      fill="url(#paint7_linear_2348_903)"/>
+                                <path d="M63.0828 36.8489L79.6403 62.4604V36.8489H63.0828Z"
+                                      fill="url(#paint8_linear_2348_903)"/>
+                            </g>
+                        </g>
+                        <rect x="1.5" y="1.5" width="77.5" height="77.5" rx="38.75"
+                              stroke="url(#paint9_linear_2348_903)" stroke-width="3.5"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_2348_903" x="0.830078" y="13.1953" width="79.3105" height="55.6914"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dx="0.5" dy="0.5"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix"
+                                           values="0 0 0 0 0.879167 0 0 0 0 0.900313 0 0 0 0 1 0 0 0 1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2348_903"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2348_903" result="shape"/>
+                        </filter>
+                        <linearGradient id="paint0_linear_2348_903" x1="-3.4595" y1="82.8212" x2="65.7472" y2="15.4358"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop offset="0.203861" stop-color="#FF6C1E"/>
+                            <stop offset="1" stop-color="#FF9938"/>
+                        </linearGradient>
+                        <radialGradient id="paint1_radial_2348_903" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(40 40.5) rotate(90) scale(49.5 50.3464)">
+                            <stop stop-color="#111C68"/>
+                            <stop offset="1" stop-color="#15171F"/>
+                        </radialGradient>
+                        <linearGradient id="paint2_linear_2348_903" x1="73" y1="6.99981" x2="5.25" y2="66.9998"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#DBE4FF"/>
+                            <stop offset="1" stop-color="#5967FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint3_linear_2348_903" x1="73" y1="6.99981" x2="5.25" y2="66.9998"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#DBE4FF"/>
+                            <stop offset="1" stop-color="#5967FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint4_linear_2348_903" x1="73" y1="6.99981" x2="5.25" y2="66.9998"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#DBE4FF"/>
+                            <stop offset="1" stop-color="#5967FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint5_linear_2348_903" x1="73" y1="6.99981" x2="5.25" y2="66.9998"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#DBE4FF"/>
+                            <stop offset="1" stop-color="#5967FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint6_linear_2348_903" x1="73" y1="6.99981" x2="5.25" y2="66.9998"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#DBE4FF"/>
+                            <stop offset="1" stop-color="#5967FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint7_linear_2348_903" x1="73" y1="6.99981" x2="5.25" y2="66.9998"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#DBE4FF"/>
+                            <stop offset="1" stop-color="#5967FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint8_linear_2348_903" x1="73" y1="6.99981" x2="5.25" y2="66.9998"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#DBE4FF"/>
+                            <stop offset="1" stop-color="#5967FF"/>
+                        </linearGradient>
+                        <linearGradient id="paint9_linear_2348_903" x1="68.75" y1="2.25" x2="6.75" y2="73.25"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF9D3A"/>
+                            <stop offset="1" stop-color="#FF671C"/>
+                        </linearGradient>
+                        <clipPath id="clip0_2348_903">
+                            <rect x="1.5" y="1.5" width="77.5" height="77.5" rx="38.75" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <svg id="EnGa" viewBox="0 0 270 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.6008 2.00039V5.00039L16.2008 6.40039H6.00078V13.6004H14.4008V18.0004H6.00078V25.6004H17.6008V30.0004H0.800781V2.00039H17.6008Z"
+                          fill="#B6BDFF"/>
+                    <path d="M29.1914 9.20039H31.5914C34.7914 9.20039 36.9914 11.4004 36.9914 14.2004V30.0004H31.9914V15.0004C31.9914 14.0004 31.3914 13.4004 30.1914 13.4004H28.1914C26.3914 13.4004 25.7914 15.2004 25.7914 15.2004V30.0004H20.7914V9.60039H24.3914L24.7914 11.6004H25.1914C25.1914 11.6004 26.3914 9.20039 29.1914 9.20039Z"
+                          fill="#B6BDFF"/>
+                    <path d="M46.007 15.0004V16.4004C46.007 17.4004 46.607 18.0004 47.807 18.0004H49.607C50.807 18.0004 51.407 17.4004 51.407 16.4004V15.0004C51.407 14.0004 50.807 13.4004 49.607 13.4004H47.807C46.607 13.4004 46.007 14.0004 46.007 15.0004ZM44.807 30.0004V31.2004C44.807 32.2004 45.407 32.8004 46.607 32.8004H50.807C52.007 32.8004 52.607 32.2004 52.607 31.2004V30.0004C52.607 29.0004 52.007 28.4004 50.807 28.4004H46.607C45.407 28.4004 44.807 29.0004 44.807 30.0004ZM53.807 9.80039V10.2004C53.807 10.2004 56.407 11.0004 56.407 14.2004V17.2004C56.407 20.0004 54.207 22.2004 51.007 22.2004H46.807C46.407 22.2004 46.207 22.4004 46.207 22.8004V23.6004C46.207 24.0004 46.407 24.2004 46.807 24.2004H52.207C55.407 24.2004 57.607 26.4004 57.607 29.2004V32.0004C57.607 34.8404 55.367 37.0004 52.207 37.0004H45.207C42.007 37.0004 39.807 34.8004 39.807 32.0004V29.2004C39.807 26.0004 42.607 25.2004 42.607 25.2004V24.8004C42.607 24.8004 41.807 24.6004 41.807 23.6004V22.2004C41.807 21.2004 42.607 21.0004 42.607 21.0004V20.6004C42.607 20.6004 41.007 19.6004 41.007 17.2004V14.2004C41.007 11.4004 43.207 9.20039 46.407 9.20039H49.807L51.407 5.60039H55.607V7.60039L53.807 9.80039Z"
+                          fill="#B6BDFF"/>
+                    <path d="M60.8008 25.0004V2.00039H65.8008V24.2004C65.8008 25.2004 66.4008 25.8004 67.6008 25.8004H68.4008V30.0004H66.2008C63.0008 30.0004 60.8008 27.8004 60.8008 25.0004Z"
+                          fill="#B6BDFF"/>
+                    <path d="M76.182 9.60039V30.0004H71.182V9.60039H76.182ZM76.182 0.400391V5.60039H71.182V0.400391H76.182Z"
+                          fill="#B6BDFF"/>
+                    <path d="M79.9867 16.4004V14.6004C79.9867 11.8004 82.1867 9.60039 85.3867 9.60039H93.9867V12.6004L92.7867 13.8004H86.7867C85.5867 13.8004 84.9867 14.4004 84.9867 15.4004V15.8004C84.9867 16.6004 85.5867 17.2004 86.3867 17.4004L90.7867 18.4004C92.9867 18.8404 94.5867 20.4004 94.5867 23.2004V25.0004C94.5867 27.8004 92.3867 30.0004 89.1867 30.0004H79.7867V25.8004H87.7867C88.9867 25.8004 89.5867 25.2004 89.5867 24.2004V23.8004C89.5867 23.0004 88.9867 22.4004 88.1867 22.2004L83.7867 21.2004C81.5867 20.7604 79.9867 19.2004 79.9867 16.4004Z"
+                          fill="#B6BDFF"/>
+                    <path d="M103.574 9.60039H109.374C112.574 9.60039 114.774 11.8004 114.774 14.6004V30.0004H109.774V15.4004C109.774 14.4004 109.174 13.8004 107.974 13.8004H103.574V30.0004H98.5742V2.00039H103.574V9.60039Z"
+                          fill="#B6BDFF"/>
+                    <path d="M143.374 6.40039H134.974C133.774 6.40039 132.974 7.20039 132.974 8.20039V23.8004C132.974 24.8004 133.774 25.6004 134.974 25.6004H140.374V14.6004H145.574V30.0004H133.574C129.974 30.0004 127.774 27.8004 127.774 24.6004V7.40039C127.774 4.20039 129.974 2.00039 133.574 2.00039H144.774V5.00039L143.374 6.40039Z"
+                          fill="#B6BDFF"/>
+                    <path d="M154.362 23.2004V24.6004C154.362 25.6004 154.962 26.2004 156.162 26.2004H157.962C159.762 26.2004 160.362 24.4004 160.362 24.4004V21.6004H156.162C154.962 21.6004 154.362 22.2004 154.362 23.2004ZM165.362 30.0004H161.762L161.362 28.0004H160.962C160.962 28.0004 159.762 30.4004 156.962 30.4004H154.762C151.562 30.4004 149.362 28.2004 149.362 25.4004V22.4004C149.362 19.6004 151.562 17.4004 154.762 17.4004H160.362V15.4004C160.362 14.4004 159.762 13.8004 158.562 13.8004H150.962V9.60039H159.962C163.162 9.60039 165.362 11.8004 165.362 14.6004V30.0004Z"
+                          fill="#B6BDFF"/>
+                    <path d="M180.766 30.0004V15.0004C180.766 14.0004 180.166 13.4004 178.966 13.4004H177.566C175.766 13.4004 175.166 15.2004 175.166 15.2004V30.0004H170.166V9.60039H173.766L174.166 11.6004H174.566C174.566 11.6004 175.766 9.20039 178.566 9.20039H180.366C183.366 9.20039 184.366 11.4004 184.366 11.4004H184.566C184.566 11.4004 185.566 9.20039 188.566 9.20039H190.966C194.166 9.20039 196.366 11.4004 196.366 14.2004V30.0004H191.366V15.0004C191.366 14.0004 190.766 13.4004 189.566 13.4004H187.566C186.366 13.4004 185.766 14.0004 185.766 15.0004V30.0004H180.766Z"
+                          fill="#B6BDFF"/>
+                    <path d="M206.182 9.60039V30.0004H201.182V9.60039H206.182ZM206.182 0.400391V5.60039H201.182V0.400391H206.182Z"
+                          fill="#B6BDFF"/>
+                    <path d="M211.387 30.0004V6.60039C211.387 3.80039 213.587 1.60039 216.787 1.60039H223.187V4.60039L221.987 5.80039H218.187C216.987 5.80039 216.387 6.40039 216.387 7.40039V11.8004H221.187V16.0004H216.387V30.0004H211.387Z"
+                          fill="#B6BDFF"/>
+                    <path d="M229.776 9.60039V30.0004H224.776V9.60039H229.776ZM229.776 0.400391V5.60039H224.776V0.400391H229.776Z"
+                          fill="#B6BDFF"/>
+                    <path d="M242.98 13.4004H240.78C239.58 13.4004 238.98 14.0004 238.98 15.0004V17.6004H244.78V15.0004C244.78 14.0004 244.18 13.4004 242.98 13.4004ZM248.98 30.0004H239.38C236.18 30.0004 233.98 27.8004 233.98 25.0004V14.2004C233.98 11.4004 236.18 9.20039 239.38 9.20039H244.38C247.58 9.20039 249.78 11.4004 249.78 14.2004V21.8004H238.98V24.2004C238.98 25.2004 239.58 25.8004 240.78 25.8004H248.98V30.0004Z"
+                          fill="#B6BDFF"/>
+                    <path d="M260.195 26.2004H262.195C263.995 26.2004 264.595 24.4004 264.595 24.4004V13.8004H260.195C258.995 13.8004 258.395 14.4004 258.395 15.4004V24.6004C258.395 25.6004 258.995 26.2004 260.195 26.2004ZM261.195 30.4004H258.795C255.595 30.4004 253.395 28.2004 253.395 25.4004V14.6004C253.395 11.8004 255.595 9.60039 258.795 9.60039H264.595V2.00039H269.595V30.0004H265.995L265.595 28.0004H265.195C265.195 28.0004 263.995 30.4004 261.195 30.4004Z"
+                          fill="#B6BDFF"/>
+                </svg>
+            </div>
+            <button id="primary"><a href="">Watch us on YouTube</a></button>
+            <button id="secondary"><a href="">Chat with us!</a></button>
+
+            <div class="social-media">
+                <ul>
+                    <li><a href="">
+                        <svg id="IG" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_2350_950" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                  width="30" height="30">
+                                <rect width="30" height="30" rx="10"/>
+                            </mask>
+                            <g mask="url(#mask0_2350_950)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M12.5 4.0625C7.8401 4.0625 4.0625 7.8401 4.0625 12.5V17.5C4.0625 22.1599 7.8401 25.9375 12.5 25.9375H17.5C22.1599 25.9375 25.9375 22.1599 25.9375 17.5V12.5C25.9375 7.8401 22.1599 4.0625 17.5 4.0625H12.5ZM15 12.0312C13.3604 12.0312 12.0312 13.3604 12.0312 15C12.0312 16.6396 13.3604 17.9688 15 17.9688C16.6396 17.9688 17.9688 16.6396 17.9688 15C17.9688 13.3604 16.6396 12.0312 15 12.0312ZM10.4688 15C10.4688 12.4975 12.4975 10.4688 15 10.4688C17.5025 10.4688 19.5312 12.4975 19.5312 15C19.5312 17.5025 17.5025 19.5312 15 19.5312C12.4975 19.5312 10.4688 17.5025 10.4688 15ZM20.3125 8.75C19.7947 8.75 19.375 9.16973 19.375 9.6875C19.375 10.2053 19.7947 10.625 20.3125 10.625C20.8303 10.625 21.25 10.2053 21.25 9.6875C21.25 9.16973 20.8303 8.75 20.3125 8.75Z"/>
+                            </g>
+                        </svg>
+                    </a></li>
+                    <li><a href="">
+                        <svg id="YT" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_2350_957" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                  width="30" height="30">
+                                <rect width="30" height="30" rx="10"/>
+                            </mask>
+                            <g mask="url(#mask0_2350_957)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M2.8125 11.25C2.8125 7.97081 5.47081 5.3125 8.75 5.3125H21.25C24.5292 5.3125 27.1875 7.97081 27.1875 11.25V18.75C27.1875 22.0292 24.5292 24.6875 21.25 24.6875H8.75C5.47081 24.6875 2.8125 22.0292 2.8125 18.75V11.25ZM18.125 16.0825C18.9583 15.6014 18.9583 14.3986 18.125 13.9175L14.375 11.7524C13.5417 11.2713 12.5 11.8727 12.5 12.8349V17.1651C12.5 18.1273 13.5417 18.7287 14.375 18.2476L18.125 16.0825Z"/>
+                            </g>
+                        </svg>
+                    </a></li>
+                    <li><a href="">
+                        <svg id="BuyCoffee" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_2350_940" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                  width="30" height="30">
+                                <rect width="30" height="30" rx="10"/>
+                            </mask>
+                            <g mask="url(#mask0_2350_940)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M14.0498 3.37598C14.4812 3.37598 14.831 3.72575 14.831 4.15723V6.65723C14.831 7.0887 14.4812 7.43848 14.0498 7.43848C13.6183 7.43848 13.2685 7.0887 13.2685 6.65723V4.15723C13.2685 3.72575 13.6183 3.37598 14.0498 3.37598ZM11.081 5.40723C11.081 4.97575 10.7312 4.62598 10.2998 4.62598C9.86829 4.62598 9.51851 4.97575 9.51851 5.40723V6.65723C9.51851 7.0887 9.86829 7.43848 10.2998 7.43848C10.7312 7.43848 11.081 7.0887 11.081 6.65723V5.40723ZM5.63821 13.2186C5.45602 11.0323 7.18136 9.15723 9.37526 9.15723H18.7243C20.5408 9.15723 22.0361 10.4427 22.3933 12.126H24.2626C25.9388 12.126 27.196 13.6595 26.8673 15.3032L26.6173 16.5532C26.369 17.7948 25.2788 18.6885 24.0126 18.6885H22.0055L21.9318 19.5725C21.7159 22.1639 19.5495 24.1572 16.9491 24.1572H11.1504C8.54998 24.1572 6.38365 22.1639 6.1677 19.5725L5.63821 13.2186ZM22.1357 17.126L22.4222 13.6885H24.2626C24.9528 13.6885 25.4705 14.3199 25.3351 14.9967L25.0851 16.2467C24.9829 16.758 24.534 17.126 24.0126 17.126H22.1357ZM18.581 5.40723C18.581 4.97575 18.2312 4.62598 17.7998 4.62598C17.3683 4.62598 17.0185 4.97575 17.0185 5.40723V6.65723C17.0185 7.0887 17.3683 7.43848 17.7998 7.43848C18.2312 7.43848 18.581 7.0887 18.581 6.65723V5.40723Z"/>
+                            </g>
+                        </svg>
+                    </a></li>
+                    <li><a href="">
+                        <svg id="Email" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_2350_918" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                  width="30" height="30">
+                                <rect width="30" height="30" rx="10"/>
+                            </mask>
+                            <g mask="url(#mask0_2350_918)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M8.75 6.25C5.98858 6.25 3.75 8.48858 3.75 11.25V18.75C3.75 21.5114 5.98858 23.75 8.75 23.75H21.25C24.0114 23.75 26.25 21.5114 26.25 18.75V11.25C26.25 8.48858 24.0114 6.25 21.25 6.25H8.75ZM8.05243 9.44757C7.74733 9.14248 7.25267 9.14248 6.94757 9.44757C6.64248 9.75267 6.64248 10.2473 6.94757 10.5524L10.6976 14.3024L10.912 14.5169C13.1698 16.7746 16.8302 16.7746 19.088 14.5169L19.3024 14.3024L23.0524 10.5524C23.3575 10.2473 23.3575 9.75267 23.0524 9.44757C22.7473 9.14248 22.2527 9.14248 21.9476 9.44757L18.1976 13.1976L17.9831 13.412C16.3356 15.0596 13.6644 15.0596 12.0169 13.412L11.8024 13.1976L8.05243 9.44757Z"/>
+                            </g>
+                        </svg>
+                    </a></li>
+                    <li><a href="">
+                        <svg id="X_Twitter" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_2350_963" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                  width="30" height="30">
+                                <rect width="30" height="30" rx="10"/>
+                            </mask>
+                            <g mask="url(#mask0_2350_963)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M4.0625 12.5C4.0625 7.8401 7.8401 4.0625 12.5 4.0625H17.5C22.1599 4.0625 25.9375 7.8401 25.9375 12.5V17.5C25.9375 22.1599 22.1599 25.9375 17.5 25.9375H12.5C7.8401 25.9375 4.0625 22.1599 4.0625 17.5V12.5ZM18.5608 9.6296C18.4437 9.47047 18.295 9.39091 18.1149 9.39091C17.9077 9.39091 17.7275 9.51821 17.5743 9.77281L15.0526 13.7372L12.5068 9.70916C12.3536 9.48639 12.1689 9.375 11.9527 9.375C11.7815 9.375 11.6239 9.45456 11.4797 9.61368C11.3356 9.7622 11.2635 9.95315 11.2635 10.1865C11.2635 10.3563 11.3131 10.5154 11.4122 10.6639L14.1628 14.9991L11.4122 19.3838C11.3041 19.5642 11.25 19.7445 11.25 19.9249C11.25 20.1052 11.3086 20.2696 11.4257 20.4181C11.5428 20.556 11.6869 20.625 11.8581 20.625C12.0833 20.625 12.268 20.503 12.4122 20.259L14.943 16.2289L17.5203 20.2908C17.6644 20.5136 17.8446 20.625 18.0608 20.625C18.214 20.625 18.3671 20.556 18.5203 20.4181C18.6734 20.2802 18.75 20.084 18.75 19.8294C18.75 19.649 18.7004 19.4899 18.6014 19.352L15.8349 14.975L18.6014 10.6162C18.7004 10.457 18.75 10.2926 18.75 10.1229C18.75 9.94254 18.6869 9.77811 18.5608 9.6296Z"/>
+                            </g>
+                        </svg>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-right">
+            <ul class="nav-links">
+                <li><a class="Flink-item" href="#home">Home</a></li>
+                <li><a class="Flink-item" href="#video">Video</a></li>
+                <li><a class="Flink-item" href="#pricing">Pricing</a></li>
+                <li><a class="Flink-item" href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <img class="Fdivider" src="https://imatt-oss.github.io/EnglishG/images/Footer/Line_divider.png" alt="">
+
+    <div class="notion-section">
+        <p>Powered by <a href="https://www.notion.so/">Notion</a> — Available on all platforms.</p>
+        <div class="buttons">
+            <button><a href="https://www.notion.so/download">Download Notion</a></button>
+            <button><a href="">Buy FLUENT Hub</a></button>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>
