@@ -99,8 +99,7 @@
 
     .input-container div {
         display: flex;
-        flex-shrink: 1;
-        flex-grow: 1;
+        max-width: calc(100% - 130px);
     }
 
     .input-container input[type="email"] {
@@ -110,6 +109,7 @@
         outline: none;
         background-color: transparent;
         color: #c9d3fd;
+
 
     }
 
@@ -366,6 +366,7 @@
             padding: 15px 30px;
 
         }
+
     }
 
     /* For screens 767px and smaller */
@@ -388,11 +389,14 @@
         }
         .input-container input[type="email"] {
             font-size: 16px;
-            max-width: 60%;
         }
         .input-container button {
             padding: 7px 30px;
             margin-left: 5px; /* Adds the 10px space between the input and button */
+        }
+        .input-container svg {
+            display: none;
+            visibility: hidden;
         }
         .main-section {
             padding-right: 0;
