@@ -76,6 +76,7 @@
     .input-container {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         border: 1px solid #3E4150;
         border-radius: 50px;
         width: 546px;
@@ -96,14 +97,19 @@
 
     }
 
+    .input-container div {
+        display: flex;
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+
     .input-container input[type="email"] {
         font-family: "Exo 2", sans-serif;
-        flex: 1; /* Takes up the remaining space */
         border: none;
         font-size: 20px;
         outline: none;
         background-color: transparent;
-        color: #656A82;
+        color: #c9d3fd;
 
     }
 
@@ -199,19 +205,23 @@
         color: #ffffff;
     }
 
+    .main-left button a:active {
+        color: #FFFFFF;
+    }
+
     .main-left button a:visited {
         color: rgba(255, 255, 255, 0.8);
     }
 
     #primary {
-        background-color: #3653F6;
+        background-color: #020413;
         color: rgba(255, 255, 255, 0.8);
     }
 
     #primary:hover {
-        background-color: #2f4dff;
+        background-color: #ff4e4e;
         color: rgba(255, 255, 255, 1);
-        box-shadow: 0 0 8px rgba(47, 77, 255, 0.4);
+        /*box-shadow: 0 0 8px rgba(47, 77, 255, 0.4);*/
 
     }
 
@@ -309,6 +319,16 @@
         text-decoration: none;
     }
 
+    .notion-section a {
+        color: #7f87b6;
+        text-decoration: none;
+    }
+
+    .notion-section a:hover {
+        color: #6E7498;
+        text-decoration: underline;
+    }
+
     .notion-section a:visited {
         color: #6E7498;
         text-decoration: none;
@@ -325,7 +345,12 @@
 
     .Fdivider {
         margin: auto;
-        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Fdivider img {
+        max-width: 100%;
     }
 
     #profile-icon {
@@ -353,7 +378,8 @@
             margin-bottom: 20px;
         }
         .newsletter h3 {
-            font-size: 24px;
+            font-size: 16px;
+            letter-spacing: 1px;
 
         }
         .input-container {
@@ -362,7 +388,7 @@
         }
         .input-container input[type="email"] {
             font-size: 16px;
-
+            max-width: 60%;
         }
         .input-container button {
             padding: 7px 30px;
@@ -386,12 +412,17 @@
             font-weight: 300;
             padding: 10px 20px;
         }
+        .social-media ul {
+            width: 200px;
+            flex-wrap: wrap;
+        }
         #secondary {
             display: none;
             visibility: hidden;
         }
         .main-right {
-            align-self: flex-start;
+            align-self: flex-end;
+            padding-bottom: 30px;
         }
         .main-right .nav-links {
             gap: 18px;
@@ -505,24 +536,28 @@
         <h3>Get Weekly Cool English Tips!</h3>
         <form action="/submit-email" method="POST" class="email-form">
             <div class="input-container">
-                <svg id="profile-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="mask0_2350_1632" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="38"
-                          height="38">
-                        <rect width="38" height="38" rx="12.6667" fill="#C4C4C4"/>
-                    </mask>
-                    <g mask="url(#mask0_2350_1632)">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M15.2389 12.6663C15.2389 10.5895 16.9225 8.90592 18.9993 8.90592C21.0762 8.90592 22.7598 10.5895 22.7598 12.6663C22.7598 14.7432 21.0762 16.4268 18.9993 16.4268C16.9225 16.4268 15.2389 14.7432 15.2389 12.6663ZM18.9993 6.92676C15.8295 6.92676 13.2598 9.49646 13.2598 12.6663C13.2598 15.8362 15.8295 18.4059 18.9993 18.4059C22.1692 18.4059 24.7389 15.8362 24.7389 12.6663C24.7389 9.49646 22.1692 6.92676 18.9993 6.92676ZM17.4752 20.1875C15.069 20.1875 12.8081 21.3388 11.3928 23.2848L10.614 24.3557C8.52093 27.2336 10.5768 31.2708 14.1354 31.2708H24.3148C27.7506 31.2708 29.8329 27.4777 27.9882 24.579L27.4101 23.6706C26.0296 21.5012 23.6365 20.1875 21.0651 20.1875H17.4752ZM13.3136 24.6817C14.2819 23.3502 15.8288 22.5625 17.4752 22.5625H21.0651C22.8245 22.5625 24.4619 23.4614 25.4064 24.9457L25.9845 25.8541C26.823 27.1717 25.8765 28.8958 24.3148 28.8958H14.1354C12.5178 28.8958 11.5833 27.0607 12.5347 25.7526L13.3136 24.6817Z"
-                              fill="#656A82"/>
-                    </g>
-                </svg>
-                <input type="email" name="email" placeholder="Enter your email" required>
+                <div>
+                    <svg id="profile-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_2350_1632" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="38"
+                              height="38">
+                            <rect width="38" height="38" rx="12.6667" fill="#C4C4C4"/>
+                        </mask>
+                        <g mask="url(#mask0_2350_1632)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M15.2389 12.6663C15.2389 10.5895 16.9225 8.90592 18.9993 8.90592C21.0762 8.90592 22.7598 10.5895 22.7598 12.6663C22.7598 14.7432 21.0762 16.4268 18.9993 16.4268C16.9225 16.4268 15.2389 14.7432 15.2389 12.6663ZM18.9993 6.92676C15.8295 6.92676 13.2598 9.49646 13.2598 12.6663C13.2598 15.8362 15.8295 18.4059 18.9993 18.4059C22.1692 18.4059 24.7389 15.8362 24.7389 12.6663C24.7389 9.49646 22.1692 6.92676 18.9993 6.92676ZM17.4752 20.1875C15.069 20.1875 12.8081 21.3388 11.3928 23.2848L10.614 24.3557C8.52093 27.2336 10.5768 31.2708 14.1354 31.2708H24.3148C27.7506 31.2708 29.8329 27.4777 27.9882 24.579L27.4101 23.6706C26.0296 21.5012 23.6365 20.1875 21.0651 20.1875H17.4752ZM13.3136 24.6817C14.2819 23.3502 15.8288 22.5625 17.4752 22.5625H21.0651C22.8245 22.5625 24.4619 23.4614 25.4064 24.9457L25.9845 25.8541C26.823 27.1717 25.8765 28.8958 24.3148 28.8958H14.1354C12.5178 28.8958 11.5833 27.0607 12.5347 25.7526L13.3136 24.6817Z"
+                                  fill="#656A82"/>
+                        </g>
+                    </svg>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+
+                </div>
                 <button type="submit">Submit</button>
             </div>
         </form>
     </div>
-
-    <img class="Fdivider" src="https://imatt-oss.github.io/EnglishG/images/Footer/Line_divider.png" alt="">
+    <div class="Fdivider" >
+        <img src="https://imatt-oss.github.io/EnglishG/images/Footer/Line_divider.png" alt="">
+    </div>
 
     <div class="main-section">
         <div class="main-left">
@@ -736,7 +771,9 @@
         </div>
     </div>
 
-    <img class="Fdivider" src="https://imatt-oss.github.io/EnglishG/images/Footer/Line_divider.png" alt="">
+    <div class="Fdivider" >
+        <img src="https://imatt-oss.github.io/EnglishG/images/Footer/Line_divider.png" alt="">
+    </div>
 
     <div class="notion-section">
         <p>Powered by <a href="https://www.notion.so/">Notion</a> — Available on all platforms.</p>
